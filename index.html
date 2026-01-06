@@ -23,162 +23,75 @@ body{
   color:var(--text);
   line-height:1.6;
 }
-.container{
-  max-width:1300px;
-  width:90%;
-  margin:auto;
-}
+.container{max-width:1300px;width:90%;margin:auto}
 
 /* HEADER */
 header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(2,6,23,.92);
-  backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:100;
+  background:rgba(2,6,23,.95);
 }
-.nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 0;
-}
-.brand h1{
-  color:white;
-  font-size:22px;
-  font-weight:800;
-}
-.brand span{
-  display:block;
-  font-size:12px;
-  color:#94a3b8;
-}
-nav a{
-  color:#e5e7eb;
-  text-decoration:none;
-  margin-left:26px;
-  font-weight:600;
-  font-size:14px;
-}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand h1{color:white;font-size:22px;font-weight:800}
+.brand span{font-size:12px;color:#94a3b8}
+nav a{color:#e5e7eb;text-decoration:none;margin-left:26px;font-weight:600;font-size:14px}
 nav a:hover{color:#60a5fa}
 
 /* HERO */
 .hero{
-  height:92vh;
+  height:90vh;
   background:
   linear-gradient(120deg,rgba(2,6,23,.85),rgba(30,64,175,.75)),
-  url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
+  url('images/gallery/navruz-1.jpg');
   background-size:cover;
   background-position:center;
-  display:flex;
-  align-items:center;
+  display:flex;align-items:center;
 }
-.hero-box{
-  max-width:820px;
-  color:white;
-}
-.hero-box h2{
-  font-size:54px;
-  font-weight:800;
-  line-height:1.1;
-}
-.hero-box p{
-  margin:25px 0 40px;
-  font-size:18px;
-  color:#e5e7eb;
-}
+.hero-box{max-width:820px;color:white}
+.hero-box h2{font-size:52px;font-weight:800}
+.hero-box p{margin:25px 0 40px;font-size:18px;color:#e5e7eb}
 .hero-box a{
-  display:inline-block;
-  padding:16px 38px;
-  background:var(--accent);
-  color:white;
-  text-decoration:none;
-  font-weight:700;
-  border-radius:8px;
+  padding:16px 36px;background:var(--accent);
+  color:white;text-decoration:none;font-weight:700;border-radius:8px;
 }
 
 /* SECTION */
-section{
-  padding:110px 0;
-}
-.section-head{
-  text-align:center;
-  max-width:850px;
-  margin:0 auto 70px;
-}
-.section-head h3{
-  font-size:40px;
-  font-weight:800;
-}
-.section-head p{
-  color:var(--muted);
-  margin-top:15px;
-}
+section{padding:100px 0}
+.section-head{text-align:center;max-width:850px;margin:0 auto 60px}
+.section-head h3{font-size:38px;font-weight:800}
+.section-head p{color:var(--muted);margin-top:15px}
 
 /* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:40px;
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+.box{background:white;padding:45px;border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.08)}
+.box h4{font-size:22px;margin-bottom:12px}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.gallery-item{
+  background:white;border-radius:16px;overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.08)
 }
-.box{
-  background:white;
-  padding:45px;
-  border-radius:18px;
-  box-shadow:0 30px 60px rgba(0,0,0,.08);
-}
-.box h4{
-  font-size:22px;
-  margin-bottom:12px;
-}
+.gallery-item img{width:100%;height:230px;object-fit:cover}
+.gallery-caption{padding:18px}
+.gallery-caption h5{font-size:16px;font-weight:700;margin-bottom:6px}
+.gallery-caption p{font-size:14px;color:var(--muted)}
 
 /* STATS */
-.stats{
-  background:linear-gradient(135deg,#020617,#1e40af);
-  color:white;
-}
-.stats .grid div{
-  text-align:center;
-}
-.stats h5{
-  font-size:42px;
-  font-weight:800;
-}
-.stats span{
-  color:#c7d2fe;
-}
+.stats{background:linear-gradient(135deg,#020617,#1e40af);color:white}
+.stats .grid div{text-align:center}
+.stats h5{font-size:42px;font-weight:800}
+.stats span{color:#c7d2fe}
 
 /* FOOTER */
-footer{
-  background:#020617;
-  color:#cbd5f5;
-  padding:90px 0 30px;
-}
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:40px;
-}
-footer h4{
-  color:white;
-  margin-bottom:15px;
-}
-footer p,a{
-  font-size:14px;
-  color:#94a3b8;
-  text-decoration:none;
-}
-.copy{
-  margin-top:50px;
-  text-align:center;
-  font-size:13px;
-  color:#64748b;
-}
+footer{background:#020617;color:#cbd5f5;padding:80px 0 25px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h4{color:white;margin-bottom:15px}
+footer a,footer p{font-size:14px;color:#94a3b8;text-decoration:none}
+.copy{text-align:center;margin-top:40px;font-size:13px;color:#64748b}
 
-/* RESPONSIVE */
 @media(max-width:900px){
-  .hero-box h2{font-size:40px}
   nav{display:none}
+  .hero-box h2{font-size:36px}
 }
 </style>
 </head>
@@ -206,10 +119,7 @@ footer p,a{
   <div class="container">
     <div class="hero-box">
       <h2>Kelajak kasblari shu yerdan boshlanadi</h2>
-      <p>
-        Zangiota tuman politexnikumi — zamonaviy kasbiy ta’lim,
-        real amaliyot va raqobatbardosh mutaxassislar tayyorlash markazi
-      </p>
+      <p>Zangiota tuman politexnikumi — zamonaviy kasbiy ta’lim va real amaliyot markazi</p>
       <a href="#">Qabul 2025</a>
     </div>
   </div>
@@ -219,24 +129,55 @@ footer p,a{
   <div class="container">
     <div class="section-head">
       <h3>Biz haqimizda</h3>
-      <p>
-        Politexnikum zamonaviy infratuzilma, dual ta’lim va ishlab chiqarish
-        bilan uzviy bog‘langan o‘quv tizimi asosida faoliyat yuritadi.
-      </p>
+      <p>Politexnikum dual ta’lim va zamonaviy infratuzilma asosida faoliyat yuritadi</p>
+    </div>
+    <div class="grid">
+      <div class="box"><h4>Zamonaviy yo‘nalishlar</h4><p>Talab yuqori kasblar</p></div>
+      <div class="box"><h4>Dual ta’lim</h4><p>Nazariya + amaliyot</p></div>
+      <div class="box"><h4>Tajribali ustozlar</h4><p>Malakali pedagoglar</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALEREYA -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h3>Fotogalereya</h3>
+      <p>Politexnikum hayotidan lavhalar</p>
     </div>
 
-    <div class="grid">
-      <div class="box">
-        <h4>Zamonaviy yo‘nalishlar</h4>
-        <p>Mehnat bozoriga mos, talab yuqori kasblar.</p>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/gallery/navruz-1.jpg">
+        <div class="gallery-caption">
+          <h5>Navro‘z bayrami</h5>
+          <p>Umumxalq bayrami tantanali nishonlandi</p>
+        </div>
       </div>
-      <div class="box">
-        <h4>Dual ta’lim tizimi</h4>
-        <p>Nazariya + ishlab chiqarish = real tajriba.</p>
+
+      <div class="gallery-item">
+        <img src="images/gallery/oquv-1.jpg">
+        <div class="gallery-caption">
+          <h5>O‘quv jarayoni</h5>
+          <p>Amaliy mashg‘ulotlardan lavha</p>
+        </div>
       </div>
-      <div class="box">
-        <h4>Kuchli pedagoglar</h4>
-        <p>Amaliyotchi va tajribali mutaxassislar.</p>
+
+      <div class="gallery-item">
+        <img src="images/gallery/tadbir-1.jpg">
+        <div class="gallery-caption">
+          <h5>Ma’naviy tadbir</h5>
+          <p>Yoshlar ishtirokidagi uchrashuv</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery/sport-1.jpg">
+        <div class="gallery-caption">
+          <h5>Sport musobaqasi</h5>
+          <p>Sog‘lom turmush tarzi targ‘iboti</p>
+        </div>
       </div>
     </div>
   </div>
@@ -244,18 +185,9 @@ footer p,a{
 
 <section class="stats">
   <div class="container grid">
-    <div>
-      <h5>1800+</h5>
-      <span>O‘quvchilar</span>
-    </div>
-    <div>
-      <h5>30+</h5>
-      <span>Yo‘nalishlar</span>
-    </div>
-    <div>
-      <h5>70+</h5>
-      <span>Hamkor korxonalar</span>
-    </div>
+    <div><h5>1800+</h5><span>O‘quvchilar</span></div>
+    <div><h5>30+</h5><span>Yo‘nalishlar</span></div>
+    <div><h5>70+</h5><span>Hamkorlar</span></div>
   </div>
 </section>
 
@@ -269,7 +201,6 @@ footer p,a{
       <h4>Aloqa</h4>
       <p>Zangiota tumani</p>
       <p>+998 XX XXX XX XX</p>
-      <p>info@politexnikum.uz</p>
     </div>
     <div>
       <h4>Havolalar</h4>
@@ -278,9 +209,7 @@ footer p,a{
       <a href="#">Rahbariyat</a>
     </div>
   </div>
-  <div class="copy">
-    © 2025 Zangiota tuman politexnikumi. Barcha huquqlar himoyalangan.
-  </div>
+  <div class="copy">© 2025 Zangiota tuman politexnikumi</div>
 </footer>
 
 </body>
