@@ -21,128 +21,72 @@ body{
   font-family:'Manrope',sans-serif;
   background:var(--light);
   color:var(--text);
+  line-height:1.6;
 }
-.container{
-  max-width:1300px;
-  width:90%;
-  margin:auto;
-}
-
-/* HEADER */
+.container{max-width:1300px;width:90%;margin:auto}
 header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:#020617;
+  position:sticky;top:0;z-index:100;
+  background:rgba(2,6,23,.95)
 }
 .nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 0
 }
 .brand h1{color:#fff;font-size:22px;font-weight:800}
 .brand span{color:#94a3b8;font-size:12px}
 nav a{
-  color:#e5e7eb;
-  text-decoration:none;
-  margin-left:24px;
-  font-weight:600;
+  color:#e5e7eb;text-decoration:none;
+  margin-left:24px;font-weight:600
 }
 nav a:hover{color:#60a5fa}
 
-/* HERO */
 .hero{
   height:90vh;
   background:
     linear-gradient(120deg,rgba(2,6,23,.85),rgba(30,64,175,.75)),
-    url("images/gallery/gallery-001.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
+    url("images/gallery/gallery-001.jpg") center/cover;
+  display:flex;align-items:center
 }
-.hero h2{
-  color:#fff;
-  font-size:48px;
-  font-weight:800;
-  max-width:700px;
-}
-.hero p{
-  color:#e5e7eb;
-  font-size:18px;
-  margin-top:20px;
-  max-width:650px;
-}
+.hero h2{color:#fff;font-size:48px;font-weight:800}
+.hero p{color:#e5e7eb;margin-top:20px;font-size:18px}
 
-/* SECTION */
 section{padding:100px 0}
-.section-head{
-  text-align:center;
-  margin-bottom:60px;
-}
-.section-head h3{
-  font-size:38px;
-  font-weight:800;
-}
-.section-head p{
-  color:var(--muted);
-  margin-top:12px;
-}
+.section-head{text-align:center;margin-bottom:60px}
+.section-head h3{font-size:38px;font-weight:800}
+.section-head p{color:var(--muted);margin-top:12px}
 
-/* INFO */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-.box{
-  background:#fff;
-  padding:40px;
-  border-radius:18px;
-  box-shadow:0 25px 50px rgba(0,0,0,.08);
-}
-.box h4{font-size:22px;margin-bottom:10px}
-
-/* GALLERY */
-.gallery{
-  display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
+  gap:30px
 }
 .card{
-  background:#fff;
-  border-radius:18px;
+  background:#fff;border-radius:18px;
   overflow:hidden;
-  box-shadow:0 20px 40px rgba(0,0,0,.12);
+  box-shadow:0 20px 40px rgba(0,0,0,.12)
 }
-.card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-.card div{padding:18px}
-.card h5{font-size:18px;margin-bottom:6px}
+.card img{width:100%;height:200px;object-fit:cover}
+.card .info{padding:18px}
+.card h5{font-size:17px;margin-bottom:6px}
 .card p{font-size:14px;color:#64748b}
 
-/* FOOTER */
+.stats{
+  background:linear-gradient(135deg,#020617,#1e40af);
+  color:#fff
+}
+.stats div{text-align:center}
+.stats h4{font-size:42px}
+
 footer{
-  background:#020617;
-  color:#94a3b8;
-  padding:60px 0 30px;
+  background:#020617;color:#cbd5f5;
+  padding:70px 0 30px
 }
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:40px;
-}
-footer h4{color:#fff;margin-bottom:14px}
-.copy{
-  text-align:center;
-  margin-top:40px;
-  font-size:13px;
-}
+footer h4{color:#fff;margin-bottom:10px}
+footer p,a{color:#94a3b8;font-size:14px;text-decoration:none}
+
 @media(max-width:900px){
   nav{display:none}
-  .hero h2{font-size:34px}
+  .hero h2{font-size:36px}
 }
 </style>
 </head>
@@ -156,46 +100,74 @@ footer h4{color:#fff;margin-bottom:14px}
       <span>Rasmiy web sayt</span>
     </div>
     <nav>
-      <a href="index.html">Bosh sahifa</a>
-      <a href="about.html">Biz haqimizda</a>
-      <a href="education.html">Ta'lim</a>
-      <a href="dual.html">Dual ta'lim</a>
-      <a href="news.html">Yangiliklar</a>
-      <a href="contact.html">Aloqa</a>
+      <a href="#home">Bosh sahifa</a>
+      <a href="#about">Biz haqimizda</a>
+      <a href="#edu">Ta'lim</a>
+      <a href="#dual">Dual ta'lim</a>
+      <a href="#news">Yangiliklar</a>
+      <a href="#contact">Aloqa</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
   <div class="container">
     <h2>Kelajak kasblari shu yerdan boshlanadi</h2>
-    <p>
-      Zangiota tuman politexnikumi — zamonaviy kasbiy ta’lim,
-      dual ta’lim va real amaliyotga asoslangan ta’lim muassasasi.
+    <p>Zangiota tuman politexnikumi — zamonaviy kasbiy ta’lim markazi</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <h3>Biz haqimizda</h3>
+      <p>
+        Zangiota tuman politexnikumi mehnat bozoriga mos,
+        raqobatbardosh mutaxassislarni tayyorlashga ixtisoslashgan.
+        Ta’lim jarayonlari zamonaviy texnologiyalar va dual ta’lim
+        asosida olib boriladi.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="dual">
+  <div class="container">
+    <div class="section-head">
+      <h3>Dual ta'lim</h3>
+      <p>Qabul quyidagi mutaxassisliklar bo‘yicha amalga oshiriladi</p>
+    </div>
+
+    <ul>
+      <li>Metallga ishlov berish texnologiyasi</li>
+      <li>Maktabgacha ta'lim tashkiloti tarbiyachisi</li>
+      <li>Avtomobil transportiga texnik xizmat ko‘rsatish</li>
+      <li>Elektr jihozlari mexanigi</li>
+      <li>Yengil sanoat buyumlari texnologiyasi</li>
+      <li>Oshpazlik</li>
+      <li>Tikuvchilik</li>
+      <li>O‘simliklarni himoya qilish</li>
+      <li>Kompyuter injiniringi</li>
+      <li>Non va qandolat mahsulotlari ishlab chiqarish</li>
+    </ul>
+
+    <p style="margin-top:20px">
+      <b>Dual ta’lim</b> — o‘quvchi ishlab chiqarishdan ajralmagan holda
+      nazariy va amaliy bilim oladi. <br>
+      ⏱ O‘qish muddati: <b>2 yil</b>
     </p>
   </div>
 </section>
 
-<section>
+<section id="news">
   <div class="container">
     <div class="section-head">
-      <h3>Bizning afzalliklarimiz</h3>
-      <p>Zamonaviy bilim, tajriba va imkoniyatlar</p>
-    </div>
-
-    <div class="grid">
-      <div class="box">
-        <h4>Dual ta’lim tizimi</h4>
-        <p>Talabalar ishlab chiqarish jarayonida amaliy bilim oladi.</p>
-      </div>
-      <div class="box">
-        <h4>Malakali ustozlar</h4>
-        <p>Tajribali pedagog va amaliyotchilar.</p>
-      </div>
-      <div class="box">
-        <h4>Zamonaviy infratuzilma</h4>
-        <p>Texnika va laboratoriyalar bilan jihozlangan.</p>
-      </div>
+      <h3>Yangiliklar</h3>
+      <p>
+        Politexnikumda yangi o‘quv ustaxonalari ishga tushirildi,
+        korxonalar bilan hamkorlik kengaytirildi va talabalar uchun
+        yangi imkoniyatlar yaratildi.
+      </p>
     </div>
   </div>
 </section>
@@ -206,56 +178,48 @@ footer h4{color:#fff;margin-bottom:14px}
       <h3>Fotogalereya</h3>
       <p>Politexnikum hayotidan lavhalar</p>
     </div>
+    <div class="grid" id="gallery"></div>
+  </div>
+</section>
 
-    <div class="gallery">
-      <div class="card">
-        <img src="images/gallery/gallery-001.jpg">
-        <div>
-          <h5>Navro‘z bayrami</h5>
-          <p>Milliy qadriyatlar asosidagi tadbir</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/gallery/gallery-002.jpg">
-        <div>
-          <h5>O‘quv jarayoni</h5>
-          <p>Dars mashg‘ulotlaridan lavha</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/gallery/gallery-003.jpg">
-        <div>
-          <h5>Amaliy mashg‘ulot</h5>
-          <p>Dual ta’lim asosida</p>
-        </div>
-      </div>
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <h3>Aloqa</h3>
+      <p>📞 +998 71 502 51 35 <br> 📍 Zangiota tumani</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container footer-grid">
-    <div>
-      <h4>Zangiota tuman politexnikumi</h4>
-      <p>Rasmiy web sayt</p>
-    </div>
-    <div>
-      <h4>Aloqa</h4>
-      <p>📞 +998 71 502 51 35</p>
-      <p>📍 Zangiota tumani</p>
-    </div>
-    <div>
-      <h4>Havolalar</h4>
-      <a href="news.html">Yangiliklar</a><br>
-      <a href="dual.html">Dual ta’lim</a>
-    </div>
-  </div>
-  <div class="copy">
+  <div class="container">
     © 2025 Zangiota tuman politexnikumi
   </div>
 </footer>
+
+<script>
+const gallery = document.getElementById("gallery");
+const captions = [
+  "Navro‘z bayrami",
+  "O‘quv jarayoni",
+  "Amaliy mashg‘ulot",
+  "Sport tadbiri",
+  "Madaniy tadbir",
+  "Kasbiy ko‘nikmalar"
+];
+
+for(let i=1;i<=166;i++){
+  const num = String(i).padStart(3,"0");
+  gallery.innerHTML += `
+    <div class="card">
+      <img src="images/gallery/gallery-${num}.jpg">
+      <div class="info">
+        <h5>${captions[(i-1)%captions.length]}</h5>
+        <p>Politexnikum hayotidan lavha</p>
+      </div>
+    </div>`;
+}
+</script>
 
 </body>
 </html>
