@@ -21,44 +21,18 @@ body{
   font-family:'Manrope',sans-serif;
   background:var(--light);
   color:var(--text);
-  line-height:1.6;
 }
-.container{
-  max-width:1300px;
-  width:90%;
-  margin:auto;
-}
+.container{max-width:1300px;width:90%;margin:auto}
 
 /* HEADER */
 header{
-  position:sticky;
-  top:0;
-  z-index:100;
+  position:sticky;top:0;z-index:100;
   background:rgba(2,6,23,.95);
 }
-.nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 0;
-}
-.brand h1{
-  color:white;
-  font-size:22px;
-  font-weight:800;
-}
-.brand span{
-  font-size:12px;
-  color:#94a3b8;
-}
-nav a{
-  color:#e5e7eb;
-  text-decoration:none;
-  margin-left:26px;
-  font-weight:600;
-  font-size:14px;
-}
-nav a:hover{color:#60a5fa}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand h1{color:white;font-size:22px;font-weight:800}
+.brand span{font-size:12px;color:#94a3b8}
+nav a{color:#e5e7eb;text-decoration:none;margin-left:26px;font-weight:600;font-size:14px}
 
 /* HERO */
 .hero{
@@ -67,121 +41,55 @@ nav a:hover{color:#60a5fa}
     linear-gradient(120deg,rgba(2,6,23,.85),rgba(30,64,175,.75)),
     url('images/gallery/gallery-001.jpg');
   background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
+  display:flex;align-items:center;
 }
-.hero-box{
-  max-width:820px;
-  color:white;
-}
-.hero-box h2{
-  font-size:52px;
-  font-weight:800;
-}
-.hero-box p{
-  margin:25px 0 40px;
-  font-size:18px;
-  color:#e5e7eb;
-}
-.hero-box a{
-  padding:16px 36px;
-  background:var(--accent);
-  color:white;
-  text-decoration:none;
-  font-weight:700;
-  border-radius:8px;
-}
+.hero-box{color:white;max-width:820px}
+.hero-box h2{font-size:52px;font-weight:800}
+.hero-box p{margin:25px 0 40px;font-size:18px;color:#e5e7eb}
 
 /* SECTION */
 section{padding:100px 0}
-.section-head{
-  text-align:center;
-  max-width:850px;
-  margin:0 auto 60px;
-}
-.section-head h3{
-  font-size:38px;
-  font-weight:800;
-}
-.section-head p{
-  color:var(--muted);
-  margin-top:15px;
-}
+.section-head{text-align:center;max-width:850px;margin:0 auto 60px}
+.section-head h3{font-size:38px;font-weight:800}
+.section-head p{color:var(--muted);margin-top:12px}
 
-/* INFO GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:40px;
-}
-.box{
-  background:white;
-  padding:45px;
-  border-radius:18px;
-  box-shadow:0 30px 60px rgba(0,0,0,.08);
-}
-.box h4{
-  font-size:22px;
-  margin-bottom:12px;
-}
-
-/* AUTO GALLERY */
+/* GALLERY */
 #autoGallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:26px;
 }
-#autoGallery img{
+.gallery-card{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+.gallery-card img{
   width:100%;
   height:220px;
   object-fit:cover;
-  border-radius:16px;
-  box-shadow:0 20px 40px rgba(0,0,0,.15);
-  transition:.3s;
 }
-#autoGallery img:hover{
-  transform:scale(1.04);
+.caption{
+  padding:18px;
 }
-
-/* STATS */
-.stats{
-  background:linear-gradient(135deg,#020617,#1e40af);
-  color:white;
+.caption h5{
+  font-size:16px;
+  font-weight:700;
+  margin-bottom:6px;
 }
-.stats .grid div{text-align:center}
-.stats h5{
-  font-size:42px;
-  font-weight:800;
+.caption p{
+  font-size:14px;
+  color:var(--muted);
 }
-.stats span{color:#c7d2fe}
 
 /* FOOTER */
 footer{
   background:#020617;
   color:#cbd5f5;
-  padding:80px 0 25px;
+  padding:70px 0 25px;
 }
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:40px;
-}
-footer h4{
-  color:white;
-  margin-bottom:15px;
-}
-footer p,footer a{
-  font-size:14px;
-  color:#94a3b8;
-  text-decoration:none;
-}
-.copy{
-  text-align:center;
-  margin-top:40px;
-  font-size:13px;
-  color:#64748b;
-}
+.copy{text-align:center;font-size:13px;color:#64748b}
 
 @media(max-width:900px){
   nav{display:none}
@@ -213,37 +121,12 @@ footer p,footer a{
   <div class="container">
     <div class="hero-box">
       <h2>Kelajak kasblari shu yerdan boshlanadi</h2>
-      <p>Zangiota tuman politexnikumi — zamonaviy kasbiy ta’lim va real amaliyot markazi</p>
-      <a href="#">Qabul 2025</a>
+      <p>Zangiota tuman politexnikumi — zamonaviy kasbiy ta’lim markazi</p>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="section-head">
-      <h3>Biz haqimizda</h3>
-      <p>Politexnikum dual ta’lim va zamonaviy infratuzilma asosida faoliyat yuritadi</p>
-    </div>
-
-    <div class="grid">
-      <div class="box">
-        <h4>Zamonaviy yo‘nalishlar</h4>
-        <p>Mehnat bozoriga mos kasblar</p>
-      </div>
-      <div class="box">
-        <h4>Dual ta’lim</h4>
-        <p>Nazariya va amaliyot uyg‘unligi</p>
-      </div>
-      <div class="box">
-        <h4>Tajribali ustozlar</h4>
-        <p>Malakali pedagoglar</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 166 TA RASM -->
+<!-- GALEREYA -->
 <section>
   <div class="container">
     <div class="section-head">
@@ -255,32 +138,7 @@ footer p,footer a{
   </div>
 </section>
 
-<section class="stats">
-  <div class="container grid">
-    <div><h5>1800+</h5><span>O‘quvchilar</span></div>
-    <div><h5>30+</h5><span>Yo‘nalishlar</span></div>
-    <div><h5>70+</h5><span>Hamkorlar</span></div>
-  </div>
-</section>
-
 <footer>
-  <div class="container footer-grid">
-    <div>
-      <h4>Zangiota tuman politexnikumi</h4>
-      <p>Rasmiy web sayt</p>
-    </div>
-    <div>
-      <h4>Aloqa</h4>
-      <p>Zangiota tumani</p>
-      <p>+998 XX XXX XX XX</p>
-    </div>
-    <div>
-      <h4>Havolalar</h4>
-      <a href="#">Yangiliklar</a><br>
-      <a href="#">Qabul</a><br>
-      <a href="#">Rahbariyat</a>
-    </div>
-  </div>
   <div class="copy">© 2025 Zangiota tuman politexnikumi</div>
 </footer>
 
@@ -289,11 +147,31 @@ const totalImages = 166;
 const gallery = document.getElementById("autoGallery");
 
 for(let i = 1; i <= totalImages; i++){
-  const img = document.createElement("img");
   const num = String(i).padStart(3,'0');
+
+  const card = document.createElement("div");
+  card.className = "gallery-card";
+
+  const img = document.createElement("img");
   img.src = `images/gallery/gallery-${num}.jpg`;
   img.alt = `Zangiota tuman politexnikumi rasm ${i}`;
-  gallery.appendChild(img);
+
+  const caption = document.createElement("div");
+  caption.className = "caption";
+
+  const title = document.createElement("h5");
+  title.innerText = `Rasm ${i}`;
+
+  const text = document.createElement("p");
+  text.innerText = "Zangiota tuman politexnikumida o‘tkazilgan tadbir va o‘quv jarayonidan lavha";
+
+  caption.appendChild(title);
+  caption.appendChild(text);
+
+  card.appendChild(img);
+  card.appendChild(caption);
+
+  gallery.appendChild(card);
 }
 </script>
 
