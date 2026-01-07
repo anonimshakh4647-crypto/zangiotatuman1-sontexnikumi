@@ -21,7 +21,6 @@ body{
   font-family:'Manrope',sans-serif;
   background:var(--light);
   color:var(--text);
-  line-height:1.7;
 }
 .container{
   max-width:1300px;
@@ -34,7 +33,7 @@ header{
   position:sticky;
   top:0;
   z-index:100;
-  background:rgba(2,6,23,.95);
+  background:#020617;
 }
 .nav{
   display:flex;
@@ -42,14 +41,13 @@ header{
   align-items:center;
   padding:18px 0;
 }
-.brand h1{color:white;font-size:22px;font-weight:800}
-.brand span{font-size:12px;color:#94a3b8}
+.brand h1{color:#fff;font-size:22px;font-weight:800}
+.brand span{color:#94a3b8;font-size:12px}
 nav a{
   color:#e5e7eb;
   text-decoration:none;
-  margin-left:26px;
+  margin-left:24px;
   font-weight:600;
-  font-size:14px;
 }
 nav a:hover{color:#60a5fa}
 
@@ -58,52 +56,93 @@ nav a:hover{color:#60a5fa}
   height:90vh;
   background:
     linear-gradient(120deg,rgba(2,6,23,.85),rgba(30,64,175,.75)),
-    url('images/gallery/gallery-001.jpg');
-  background-size:cover;
-  background-position:center;
+    url("images/gallery/gallery-001.jpg") center/cover no-repeat;
   display:flex;
   align-items:center;
 }
-.hero-box{max-width:820px;color:white}
-.hero-box h2{font-size:52px;font-weight:800}
-.hero-box p{margin-top:20px;font-size:18px;color:#e5e7eb}
+.hero h2{
+  color:#fff;
+  font-size:48px;
+  font-weight:800;
+  max-width:700px;
+}
+.hero p{
+  color:#e5e7eb;
+  font-size:18px;
+  margin-top:20px;
+  max-width:650px;
+}
 
 /* SECTION */
 section{padding:100px 0}
 .section-head{
   text-align:center;
-  max-width:900px;
-  margin:0 auto 60px;
+  margin-bottom:60px;
 }
-.section-head h3{font-size:38px;font-weight:800}
-.section-head p{color:var(--muted);margin-top:15px}
+.section-head h3{
+  font-size:38px;
+  font-weight:800;
+}
+.section-head p{
+  color:var(--muted);
+  margin-top:12px;
+}
 
-/* CONTENT */
-.content{
-  max-width:900px;
-  margin:auto;
-  font-size:17px;
+/* INFO */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
-.content ul{margin-top:20px;padding-left:20px}
-.content li{margin-bottom:10px}
+.box{
+  background:#fff;
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 25px 50px rgba(0,0,0,.08);
+}
+.box h4{font-size:22px;margin-bottom:10px}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+.card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+.card div{padding:18px}
+.card h5{font-size:18px;margin-bottom:6px}
+.card p{font-size:14px;color:#64748b}
 
 /* FOOTER */
 footer{
   background:#020617;
-  color:#cbd5f5;
-  padding:70px 0 25px;
-}
-footer h4{color:white;margin-bottom:12px}
-footer p,footer a{
-  font-size:14px;
   color:#94a3b8;
-  text-decoration:none;
+  padding:60px 0 30px;
 }
-.copy{text-align:center;margin-top:30px;font-size:13px;color:#64748b}
-
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:40px;
+}
+footer h4{color:#fff;margin-bottom:14px}
+.copy{
+  text-align:center;
+  margin-top:40px;
+  font-size:13px;
+}
 @media(max-width:900px){
   nav{display:none}
-  .hero-box h2{font-size:36px}
+  .hero h2{font-size:34px}
 }
 </style>
 </head>
@@ -117,138 +156,104 @@ footer p,footer a{
       <span>Rasmiy web sayt</span>
     </div>
     <nav>
-      <a href="#home">Bosh sahifa</a>
-      <a href="#about">Biz haqimizda</a>
-      <a href="#education">Ta'lim</a>
-      <a href="#dual">Dual ta'lim</a>
-      <a href="#news">Yangiliklar</a>
-      <a href="#contact">Aloqa</a>
+      <a href="index.html">Bosh sahifa</a>
+      <a href="about.html">Biz haqimizda</a>
+      <a href="education.html">Ta'lim</a>
+      <a href="dual.html">Dual ta'lim</a>
+      <a href="news.html">Yangiliklar</a>
+      <a href="contact.html">Aloqa</a>
     </nav>
   </div>
 </header>
 
-<!-- BOSH SAHIFA -->
-<section class="hero" id="home">
+<section class="hero">
   <div class="container">
-    <div class="hero-box">
-      <h2>Kelajak kasblari shu yerdan boshlanadi</h2>
-      <p>
-        Zangiota tuman politexnikumi — zamonaviy kasbiy ta’lim, real amaliyot
-        va raqobatbardosh mutaxassislar tayyorlash markazi
-      </p>
+    <h2>Kelajak kasblari shu yerdan boshlanadi</h2>
+    <p>
+      Zangiota tuman politexnikumi — zamonaviy kasbiy ta’lim,
+      dual ta’lim va real amaliyotga asoslangan ta’lim muassasasi.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h3>Bizning afzalliklarimiz</h3>
+      <p>Zamonaviy bilim, tajriba va imkoniyatlar</p>
+    </div>
+
+    <div class="grid">
+      <div class="box">
+        <h4>Dual ta’lim tizimi</h4>
+        <p>Talabalar ishlab chiqarish jarayonida amaliy bilim oladi.</p>
+      </div>
+      <div class="box">
+        <h4>Malakali ustozlar</h4>
+        <p>Tajribali pedagog va amaliyotchilar.</p>
+      </div>
+      <div class="box">
+        <h4>Zamonaviy infratuzilma</h4>
+        <p>Texnika va laboratoriyalar bilan jihozlangan.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- BIZ HAQIMIZDA -->
-<section id="about">
+<section>
   <div class="container">
     <div class="section-head">
-      <h3>Biz haqimizda</h3>
+      <h3>Fotogalereya</h3>
+      <p>Politexnikum hayotidan lavhalar</p>
     </div>
-    <div class="content">
-      <p>
-        Zangiota tuman politexnikumi yoshlarni zamonaviy kasblarga o‘qitish,
-        ularni mehnat bozorida raqobatbardosh mutaxassis sifatida tayyorlash
-        maqsadida faoliyat yuritadi.
-      </p>
-      <p>
-        Politexnikumda nazariy bilimlar amaliy mashg‘ulotlar bilan uyg‘un holda
-        olib boriladi. O‘quv jarayonlari ishlab chiqarish korxonalari bilan
-        hamkorlikda tashkil etilgan bo‘lib, talabalar real ish muhitida tajriba
-        orttiradilar.
-      </p>
-    </div>
-  </div>
-</section>
 
-<!-- TA'LIM -->
-<section id="education">
-  <div class="container">
-    <div class="section-head">
-      <h3>Ta'lim</h3>
-    </div>
-    <div class="content">
-      <p>
-        Politexnikumda ta’lim davlat ta’lim standartlari asosida olib boriladi.
-        O‘quvchilar zamonaviy texnologiyalar, amaliy mashg‘ulotlar va malakali
-        ustozlar yordamida bilim va ko‘nikmalarni egallaydilar.
-      </p>
-    </div>
-  </div>
-</section>
+    <div class="gallery">
+      <div class="card">
+        <img src="images/gallery/gallery-001.jpg">
+        <div>
+          <h5>Navro‘z bayrami</h5>
+          <p>Milliy qadriyatlar asosidagi tadbir</p>
+        </div>
+      </div>
 
-<!-- DUAL TA'LIM -->
-<section id="dual">
-  <div class="container">
-    <div class="section-head">
-      <h3>Dual ta'lim</h3>
-    </div>
-    <div class="content">
-      <p><strong>Qabul quyidagi mutaxassisliklar bo‘yicha amalga oshiriladi:</strong></p>
-      <ul>
-        <li>Metallga ishlov berish texnologiyasi</li>
-        <li>Maktabgacha ta'lim tashkiloti tarbiyachisi</li>
-        <li>Avtomobil transportiga texnik xizmat ko‘rsatish va ta'mirlash (kunduzgi)</li>
-        <li>Elektr jihozlari mexanigi va elektromontyor</li>
-        <li>Yengil sanoat buyumlari konstruktsiyasi va texnologiyasi</li>
-        <li>Umumiy ovqatlanish xizmatlarini tashkil etish (oshpaz)</li>
-        <li>Tikuvchi</li>
-        <li>O‘simliklarni himoya qilish va karantini</li>
-        <li>Kompyuter injiniringi (kunduzgi)</li>
-        <li>Non, non mahsulotlari, qandolat va makaron ishlab chiqarish</li>
-      </ul>
+      <div class="card">
+        <img src="images/gallery/gallery-002.jpg">
+        <div>
+          <h5>O‘quv jarayoni</h5>
+          <p>Dars mashg‘ulotlaridan lavha</p>
+        </div>
+      </div>
 
-      <p><strong>Dual ta'lim haqida qisqacha:</strong></p>
-      <p>
-        Dual ta'lim — bu o‘quvchi ish joyidan ajralmagan holda, bevosita ishlab
-        chiqarish jarayonida nazariy va amaliy bilimlarni o‘zlashtiradigan ta'lim
-        shaklidir.
-      </p>
-      <p><strong>O‘qish muddati:</strong> 2 yil</p>
-    </div>
-  </div>
-</section>
-
-<!-- YANGILIKLAR -->
-<section id="news">
-  <div class="container">
-    <div class="section-head">
-      <h3>Yangiliklar</h3>
-    </div>
-    <div class="content">
-      <p>
-        Politexnikumda o‘quv jarayonlarini yanada takomillashtirish,
-        ishlab chiqarish korxonalari bilan hamkorlikni kengaytirish
-        hamda talabalar uchun yangi imkoniyatlar yaratish bo‘yicha
-        muntazam ishlar olib borilmoqda.
-      </p>
-      <p>
-        Shuningdek, turli madaniy-ma'rifiy tadbirlar, sport musobaqalari
-        va kasbiy tanlovlar tashkil etilmoqda.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ALOQA -->
-<section id="contact">
-  <div class="container">
-    <div class="section-head">
-      <h3>Aloqa</h3>
-    </div>
-    <div class="content">
-      <p><strong>Telefon:</strong> +998 71 502 51 35</p>
-      <p><strong>Manzil:</strong> Zangiota tumani</p>
+      <div class="card">
+        <img src="images/gallery/gallery-003.jpg">
+        <div>
+          <h5>Amaliy mashg‘ulot</h5>
+          <p>Dual ta’lim asosida</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">
-    <h4>Zangiota tuman politexnikumi</h4>
-    <p>Rasmiy web sayt</p>
-    <div class="copy">© 2025 Barcha huquqlar himoyalangan</div>
+  <div class="container footer-grid">
+    <div>
+      <h4>Zangiota tuman politexnikumi</h4>
+      <p>Rasmiy web sayt</p>
+    </div>
+    <div>
+      <h4>Aloqa</h4>
+      <p>📞 +998 71 502 51 35</p>
+      <p>📍 Zangiota tumani</p>
+    </div>
+    <div>
+      <h4>Havolalar</h4>
+      <a href="news.html">Yangiliklar</a><br>
+      <a href="dual.html">Dual ta’lim</a>
+    </div>
+  </div>
+  <div class="copy">
+    © 2025 Zangiota tuman politexnikumi
   </div>
 </footer>
 
