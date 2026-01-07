@@ -1,72 +1,301 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zangiota tuman politexnikumi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --dark:#020617;
+  --primary:#1e40af;
+  --accent:#2563eb;
+  --light:#f8fafc;
+  --text:#1f2937;
+  --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Manrope',sans-serif;
+  background:var(--light);
+  color:var(--text);
+  line-height:1.6;
+}
+.container{
+  max-width:1300px;
+  width:90%;
+  margin:auto;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(2,6,23,.95);
+}
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+.brand h1{
+  color:white;
+  font-size:22px;
+  font-weight:800;
+}
+.brand span{
+  font-size:12px;
+  color:#94a3b8;
+}
+nav a{
+  color:#e5e7eb;
+  text-decoration:none;
+  margin-left:26px;
+  font-weight:600;
+  font-size:14px;
+}
+nav a:hover{color:#60a5fa}
+
+/* HERO */
+.hero{
+  height:90vh;
+  background:
+    linear-gradient(120deg,rgba(2,6,23,.85),rgba(30,64,175,.75)),
+    url('images/gallery/gallery-001.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+}
+.hero-box{
+  max-width:820px;
+  color:white;
+}
+.hero-box h2{
+  font-size:52px;
+  font-weight:800;
+}
+.hero-box p{
+  margin:25px 0 40px;
+  font-size:18px;
+  color:#e5e7eb;
+}
+.hero-box a{
+  padding:16px 36px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:8px;
+}
+
+/* SECTION */
+section{padding:100px 0}
+.section-head{
+  text-align:center;
+  max-width:850px;
+  margin:0 auto 60px;
+}
+.section-head h3{
+  font-size:38px;
+  font-weight:800;
+}
+.section-head p{
+  color:var(--muted);
+  margin-top:15px;
+}
+
+/* INFO GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px;
+}
+.box{
+  background:white;
+  padding:45px;
+  border-radius:18px;
+  box-shadow:0 30px 60px rgba(0,0,0,.08);
+}
+.box h4{
+  font-size:22px;
+  margin-bottom:12px;
+}
+
+/* AUTO GALLERY */
+#autoGallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
+}
+#autoGallery img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+  transition:.3s;
+}
+#autoGallery img:hover{
+  transform:scale(1.04);
+}
+
+/* STATS */
+.stats{
+  background:linear-gradient(135deg,#020617,#1e40af);
+  color:white;
+}
+.stats .grid div{text-align:center}
+.stats h5{
+  font-size:42px;
+  font-weight:800;
+}
+.stats span{color:#c7d2fe}
+
+/* FOOTER */
+footer{
+  background:#020617;
+  color:#cbd5f5;
+  padding:80px 0 25px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:40px;
+}
+footer h4{
+  color:white;
+  margin-bottom:15px;
+}
+footer p,footer a{
+  font-size:14px;
+  color:#94a3b8;
+  text-decoration:none;
+}
+.copy{
+  text-align:center;
+  margin-top:40px;
+  font-size:13px;
+  color:#64748b;
+}
+
+@media(max-width:900px){
+  nav{display:none}
+  .hero-box h2{font-size:36px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <h1>Zangiota TPM</h1>
+      <span>Rasmiy web sayt</span>
+    </div>
+    <nav>
+      <a href="#">Bosh sahifa</a>
+      <a href="#">Biz haqimizda</a>
+      <a href="#">Ta'lim</a>
+      <a href="#">Dual ta'lim</a>
+      <a href="#">Yangiliklar</a>
+      <a href="#">Aloqa</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-box">
+      <h2>Kelajak kasblari shu yerdan boshlanadi</h2>
+      <p>Zangiota tuman politexnikumi — zamonaviy kasbiy ta’lim va real amaliyot markazi</p>
+      <a href="#">Qabul 2025</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h3>Biz haqimizda</h3>
+      <p>Politexnikum dual ta’lim va zamonaviy infratuzilma asosida faoliyat yuritadi</p>
+    </div>
+
+    <div class="grid">
+      <div class="box">
+        <h4>Zamonaviy yo‘nalishlar</h4>
+        <p>Mehnat bozoriga mos kasblar</p>
+      </div>
+      <div class="box">
+        <h4>Dual ta’lim</h4>
+        <p>Nazariya va amaliyot uyg‘unligi</p>
+      </div>
+      <div class="box">
+        <h4>Tajribali ustozlar</h4>
+        <p>Malakali pedagoglar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 166 TA RASM -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h3>Fotogalereya</h3>
+      <p>Politexnikum hayotidan lavhalar</p>
+    </div>
+
+    <div id="autoGallery"></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container grid">
+    <div><h5>1800+</h5><span>O‘quvchilar</span></div>
+    <div><h5>30+</h5><span>Yo‘nalishlar</span></div>
+    <div><h5>70+</h5><span>Hamkorlar</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4>Zangiota tuman politexnikumi</h4>
+      <p>Rasmiy web sayt</p>
+    </div>
+    <div>
+      <h4>Aloqa</h4>
+      <p>Zangiota tumani</p>
+      <p>+998 XX XXX XX XX</p>
+    </div>
+    <div>
+      <h4>Havolalar</h4>
+      <a href="#">Yangiliklar</a><br>
+      <a href="#">Qabul</a><br>
+      <a href="#">Rahbariyat</a>
+    </div>
+  </div>
+  <div class="copy">© 2025 Zangiota tuman politexnikumi</div>
+</footer>
+
 <script>
 const totalImages = 166;
 const gallery = document.getElementById("autoGallery");
 
-/* HAR XIL MATNLAR RO‘YXATI */
-const captions = [
-  {
-    title: "Navro‘z bayrami tadbiri",
-    text: "Politexnikumda Navro‘z bayramiga bag‘ishlab o‘tkazilgan madaniy tadbirdan lavha"
-  },
-  {
-    title: "O‘quv jarayoni",
-    text: "Talabalar ishtirokida o‘quv mashg‘ulotlari va amaliy darslar jarayoni"
-  },
-  {
-    title: "Amaliy mashg‘ulot",
-    text: "Dual ta’lim asosida ishlab chiqarish bilan bog‘langan amaliy dars"
-  },
-  {
-    title: "Talabalar faoliyati",
-    text: "Talabalarning kundalik ta’lim va ijtimoiy hayotidan lavha"
-  },
-  {
-    title: "Ko‘rgazma va ijod",
-    text: "Talabalar tomonidan tayyorlangan ijodiy ishlar va ko‘rgazma jarayoni"
-  },
-  {
-    title: "Milliy liboslar kuni",
-    text: "Milliy qadriyatlarni targ‘ib etishga bag‘ishlangan tadbirdan lavha"
-  },
-  {
-    title: "Ma’naviy-ma’rifiy tadbir",
-    text: "Talabalar ishtirokida tashkil etilgan ma’naviy-ma’rifiy uchrashuv"
-  },
-  {
-    title: "Sport va sog‘lom turmush",
-    text: "Sport tadbirlari va sog‘lom turmush tarzini targ‘ib etish jarayoni"
-  }
-];
-
 for(let i = 1; i <= totalImages; i++){
-  const num = String(i).padStart(3,'0');
-
-  /* MATNNI AYLANIB OLADI */
-  const captionIndex = (i - 1) % captions.length;
-  const captionData = captions[captionIndex];
-
-  const card = document.createElement("div");
-  card.className = "gallery-card";
-
   const img = document.createElement("img");
+  const num = String(i).padStart(3,'0');
   img.src = `images/gallery/gallery-${num}.jpg`;
-  img.alt = captionData.title;
-
-  const caption = document.createElement("div");
-  caption.className = "caption";
-
-  const title = document.createElement("h5");
-  title.innerText = captionData.title;
-
-  const text = document.createElement("p");
-  text.innerText = captionData.text;
-
-  caption.appendChild(title);
-  caption.appendChild(text);
-
-  card.appendChild(img);
-  card.appendChild(caption);
-
-  gallery.appendChild(card);
+  img.alt = `Zangiota tuman politexnikumi rasm ${i}`;
+  gallery.appendChild(img);
 }
 </script>
+
+</body>
+</html>
